@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Policy2Pollution</title>
+        <link rel="stylesheet" href="/static/css/index.css"/>
+    </head>
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <img src="{{ url_for('static', filename='IMG/logo.png') }}" class="logo">
+                
+            </div>
+            <div class="content">
+                <h1>Visualizing Change for a Cleaner Environment</h1>
+                <p>Click on the button below to visit our dynamic page where you can explore
+                    pollution along with environmental policies!
+                </p>
+                <div>
+                    <form method="post"><button type="submit"><span></span>Explore</button></form>
+                    <!-- <span></span> -->
+                    <!-- onclick="window.location.href = url_for(templates/explore.html); -->
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

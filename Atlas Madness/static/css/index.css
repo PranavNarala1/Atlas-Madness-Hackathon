@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(41, 41, 41, 0.5),rgba(9, 104, 31, 0.5)), url('/static/IMG/background.png');
+    
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 150px;
+    height: 100px;
+    cursor: pointer;
+    position:absolute;
+    margin: 15px 15px;
+    left:0;
+    top:0;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #228B22;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-10%);
+    text-align: center;
+    color: #fff;
+    word-wrap: break-word;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+    word-wrap: break-word;
+    color: #fff;
+}
+.content p{
+    font-size: 25px;
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    color: #fff;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 30px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 5px solid #228B22;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #228B22;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}

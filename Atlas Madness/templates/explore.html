@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Save Policy Example</title>
+  <link rel="stylesheet" href="/static/css/explore.css">
+</head>
+<body>
+  <section>
+  <div class="container">
+    <div class="top-row"></div>
+    <form action="{{ url_for('save_policy') }}" method="post">
+    
+      <input name="location" type="text" placeholder="{{query_result['location']}}">
+      <input name="date" type="text" placeholder="{{query_result['date']}}">
+      <input name="name" type="text" placeholder="{{query_result['name']}}"></textarea>
+      <textarea name="description" placeholder="{{query_result['description']}}"></textarea>
+      <button type="submit"><span></span>Save Policy</button>
+    
+    </form>
+</div>
+
+    <div class="second-row">
+        <form action="{{ url_for('load_saved_policy') }}" method="post">
+        <select name="policy_name">
+          <option value="policy">Policy</option>
+          {% for policy in policy_list %}
+        <option value="{{policy}}">{{policy}}</option>
+            {% endfor %}
+        </select>
+        <button type="submit" class="load-button"><span></span>Load Policy</button>
+        <!-- <div class="button-container">
+            
+          </div> -->
+
+        </form>
+
+      
+    </div>
+    
+  </div>
+  </section>
+  <section class="slider-section">
+    <p><br><br><br>Adjust the slider to choose a different date for the map. Then, click the "Update" button.</p>
+    <div class="slider-container">
+      <form action="{{ url_for('load_map') }}" method="post">
+     <input name="slider" type="range" class="slider">
+      <button type="submit" class="slider-button" min="0" max="300">Update Map</button>
+        </form>
+    </div>
+  </section>
+  <section class="map-loading">
+    <iframe src="{{ url_for('static', filename='map.html') }}" width="800px" height="400px"></iframe>
+  </section>
+</body>
+</html>

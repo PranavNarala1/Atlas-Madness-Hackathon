@@ -1,0 +1,2 @@
+ee.Authenticate()
+ee.Initialize()
